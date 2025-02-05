@@ -12,6 +12,14 @@ code {
     monospace;
 }
 
+/* Evita el scroll horizontal en toda la página */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 /* index.css */
 
 body {

@@ -5,13 +5,12 @@ const Footer = () => {
     <footer className="footer">
       <p>&copy; 2025 Travel Album. Todos los derechos reservados.</p>
       <div className="social-links">
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          Twitter
+        <a href="https://www.tiktok.com/@pauuuli22" target="_blank" rel="noopener noreferrer">
+          TikTok
         </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/sergiomoreda7/?hl=es" target="_blank" rel="noopener noreferrer">
           Instagram
         </a>
-        {/* Otros enlaces sociales */}
       </div>
     </footer>
   );

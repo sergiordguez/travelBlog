@@ -1,53 +1,57 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import "../styles/TravelPage.css";
 
-const travels = [
-  {
-    id: 1,
-    title: "Viaje a París",
-    date: "2023-05-01 a 2023-05-15",
-    places: ["Torre Eiffel", "Museo del Louvre", "Montmartre"],
-    photos: ["/assets/photos/photo1.jpg", "/assets/photos/photo2.jpg"],
-  },
-  {
-    id: 2,
-    title: "Viaje a Tokio",
-    date: "2024-02-01 a 2024-02-10",
-    places: ["Templo Senso-ji", "Shibuya", "Akihabara"],
-    photos: ["/assets/photos/photo3.jpg", "/assets/photos/photo1.jpg"],
-  },
-  {
-    id: 3,
-    title: "Viaje a Nueva York",
-    date: "2024-09-01 a 2024-09-10",
-    places: ["Central Park", "Times Square", "Estátua de la Libertad"],
-    photos: ["/assets/photos/photo2.jpg", "/assets/photos/photo3.jpg"],
-  },
-];
+import photo1 from "../assets/photos/interrail2022/03e394b7-6801-49ab-94e2-fd62fe58dd5b.JPG";
+import photo2 from "../assets/photos/interrail2022/IMG_3593.JPG";
+import photo3 from "../assets/photos/interrail2022/IMG_3804.JPG";
+import photo4 from "../assets/photos/interrail2022/IMG_3810.JPG";
+import photo5 from "../assets/photos/interrail2022/IMG_3957.JPG";
 
-const TravelDetail = () => {
+const travelData = {
+  "1": {
+    title: "Interrail 2022",
+    startDate: "10 de Junio, 2023",
+    endDate: "20 de Junio, 2023",
+    mapImage: "/assets/maps/paris-route.jpg",
+    media: [photo1, photo2, photo3, photo4, photo5],
+  },
+  "2": {
+    title: "Interrail 2023",
+    startDate: "5 de Abril, 2023",
+    endDate: "18 de Abril, 2023",
+    mapImage: "/assets/maps/japan-route.jpg",
+    media: [],
+  },
+  "3": {
+    title: "Islandia",
+    startDate: "5 de Abril, 2023",
+    endDate: "18 de Abril, 2023",
+    mapImage: "/assets/maps/japan-route.jpg",
+    media: [],
+  },
+};
+
+const TravelPage = () => {
   const { id } = useParams();
-  const travel = travels.find((t) => t.id.toString() === id);
-
-  if (!travel) return <div>Viaje no encontrado</div>;
+  const travel = travelData[id];
 
   return (
-    <div className="travel-detail">
-      <h1>{travel.title}</h1>
-      <p>{travel.date}</p>
-      <h2>Lugares Visitados:</h2>
-      <ul>
-        {travel.places.map((place, idx) => (
-          <li key={idx}>{place}</li>
-        ))}
-      </ul>
-      <div className="photos">
-        {travel.photos.map((photo, idx) => (
-          <img key={idx} src={photo} alt={`foto ${idx + 1}`} />
+    <div className="travel-page">
+      <div className="travel-info">
+        <img src={travel.mapImage} alt="Mapa de la ruta" className="map-image" />
+        <div className="info-text">
+          <h1>{travel.title}</h1>
+          <p>📅 {travel.startDate} - {travel.endDate}</p>
+        </div>
+      </div>
+      <div className="gallery">
+        {travel.media.map((photo, i) => (
+          <img key={i} src={photo} alt={`Photo ${i}`} />
         ))}
       </div>
     </div>
   );
 };
 
-export default TravelDetail;
+export default TravelPage;
