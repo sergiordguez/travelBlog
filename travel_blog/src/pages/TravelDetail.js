@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/TravelPage.css";
 
@@ -35,6 +35,17 @@ const travelData = {
 const TravelPage = () => {
   const { id } = useParams();
   const travel = travelData[id];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % travel.media.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? travel.media.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
     <div className="travel-page">
@@ -45,10 +56,17 @@ const TravelPage = () => {
           <p>📅 {travel.startDate} - {travel.endDate}</p>
         </div>
       </div>
-      <div className="gallery">
-        {travel.media.map((photo, i) => (
-          <img key={i} src={photo} alt={`Photo ${i}`} />
-        ))}
+      <div className="slideshow-container">
+        <button className="prev" onClick={prevSlide}>❮</button>
+        <div className="slide-wrapper">
+          <img
+            src={travel.media[currentIndex]}
+            alt={`Slide ${currentIndex}`}
+            className="slide-image"
+            style={{ width: "900px", height: "650px", objectFit: "cover", borderRadius: "10px" }}
+          />
+        </div>
+        <button className="next" onClick={nextSlide}>❯</button>
       </div>
     </div>
   );
