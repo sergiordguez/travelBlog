@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useSprings, animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
 
-import photo1 from "../assets/photos/interrail2022/03e394b7-6801-49ab-94e2-fd62fe58dd5b.JPG";
 import photo2 from "../assets/photos/interrail2022/IMG_3593.JPG";
 import photo3 from "../assets/photos/interrail2022/IMG_3804.JPG";
 import photo4 from "../assets/photos/interrail2022/IMG_3810.JPG";
 import photo5 from "../assets/photos/interrail2022/IMG_3957.JPG";
 
-const images = [photo1, photo2, photo3, photo4, photo5];
+const images = [photo2, photo3, photo4, photo5];
 
 const PhotoSlider = () => {
   const [index, setIndex] = useState(0);
