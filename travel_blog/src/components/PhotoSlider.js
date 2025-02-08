@@ -15,7 +15,7 @@ const PhotoSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 10000); // Cambia cada 10 segundos
+    }, 10000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -42,7 +42,7 @@ const PhotoSlider = () => {
 
       <div className="text-content">
         <h1>Explorando el Mundo</h1>
-        <p>Descubre nuestros mejores recuerdos en fotos y videos</p>
+        <p>Nuestros mejores recuerdos recopilados en una web</p>
 
         <Link to="/travel/1">Interrail 2022</Link>
         <span> | </span>
