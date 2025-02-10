@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
-import photo2 from "../assets/photos/interrail2022/IMG_3810.JPG";
-import photo3 from "../assets/photos/interrail2022/IMG_3593.JPG";
+
+import photo2 from "../assets/photos/about/IMG_3985.JPG";
+import photo3 from "../assets/photos/about/IMG_4030.jpg";
+import photo4 from "../assets/photos/about/IMG_4041.JPG";
+import photo5 from "../assets/photos/about/IMG_4116.JPG";
+import photo6 from "../assets/photos/about/IMG_6948.JPG";
+import photo7 from "../assets/photos/about/IMG_7749.jpg";
+
 import "../styles/AboutUs.css";
 
-const images = [photo2, photo3];
+const images = [photo2, photo3, photo4, photo5, photo6, photo7].sort(() => Math.random() - 0.5);
 
 const AboutUs = () => {
     const [index, setIndex] = useState(0);
@@ -11,7 +17,7 @@ const AboutUs = () => {
     useEffect(() => {
         const interval = setInterval(() => {
         setIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 10000); // Cambia cada 10 segundos
+        }, 5000); // Cambia cada 10 segundos
 
         return () => clearInterval(interval);
     }, []);
