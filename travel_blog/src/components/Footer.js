@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2025 Travel Album. Todos los derechos reservados.</p>
+      <p>&copy; 2025 SPTripBook. Todos los derechos reservados.</p>
       <div className="social-links">
         <a href="https://www.tiktok.com/@pauuuli22" target="_blank" rel="noopener noreferrer">
           TikTok
