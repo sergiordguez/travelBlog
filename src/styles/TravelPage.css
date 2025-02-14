@@ -80,6 +80,7 @@
 }
 
 .prev, .next {
+  background-color: transparent;
   color: rgba(0, 0, 0, 0.5);
   border: none;
   padding: 10px 15px;
@@ -101,4 +102,42 @@
 
 .prev:hover, .next:hover {
   background-color: rgba(100, 98, 98, 0.425);
+}
+
+@media (max-width: 768px) {
+  .media-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .slide-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .prev, .next {
+    font-size: 18px;
+    padding: 8px 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .media-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .slide-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .prev, .next {
+    font-size: 16px;
+    padding: 6px 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
