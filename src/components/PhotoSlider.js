@@ -57,9 +57,9 @@ const PhotoSlider = () => {
         <p>Nuestros mejores recuerdos recopilados en una web</p>
 
         <Link to="/travel/1">Interrail 2022</Link>
-        <span> | </span>
+        <span>  </span>
         <Link to="/travel/2">Interrail 2023</Link>
-        <span> | </span>
+        <span>  </span>
         <Link to="/travel/3">Islandia</Link>
       </div>
     </div>
