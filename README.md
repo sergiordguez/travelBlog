@@ -1,6 +1,6 @@
 # travelBlog
 
-Web application for a blog of all the trips we (me and my girlfriend) have done.
+Web application for a blog of all the trips we have done.
 You can access to it by: https://sptripbook.vercel.app/
 
 ## Done with
