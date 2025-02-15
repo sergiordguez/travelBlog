@@ -21,6 +21,12 @@ import photo16 from "../assets/photos/interrail2022/IMG_3672.JPG";
 import photo17 from "../assets/photos/interrail2022/IMG_4060.JPG";
 import photo61 from "../assets/photos/interrail2022/IMG_3463.JPG";
 import photo62 from "../assets/photos/interrail2022/IMG_3935.JPG";
+import photo63 from "../assets/photos/interrail2022/IMG_3713.JPG";
+import photo64 from "../assets/photos/interrail2022/IMG_3726.JPG";
+import photo65 from "../assets/photos/interrail2022/IMG_3962.JPG";
+import photo66 from "../assets/photos/interrail2022/IMG_4007.JPG";
+import photo67 from "../assets/photos/interrail2022/IMG_4016.JPG";
+import photo68 from "../assets/photos/interrail2022/IMG_4098.JPG";
 
 import portada2023 from "../assets/photos/interrail2023/portada2023.jpg";
 import photo18 from "../assets/photos/interrail2023/26E1398A-2DCD-4D70-AF28-FABF635F88B8.JPG";
@@ -46,6 +52,11 @@ import photo37 from "../assets/photos/interrail2023/IMG_0651.JPG";
 import photo38 from "../assets/photos/interrail2023/IMG_0653.JPG";
 import photo39 from "../assets/photos/interrail2023/IMG_9871.JPG";
 import photo40 from "../assets/photos/interrail2023/bd4cda06-44bd-4f01-af92-22d50f37b623.JPG";
+import photo69 from "../assets/photos/interrail2023/IMG_0137.JPG";
+import video10 from "../assets/photos/interrail2023/IMG_9880.MP4";
+import video11 from "../assets/photos/interrail2023/IMG_9896.MP4";
+import video12 from "../assets/photos/interrail2023/IMG_9897.MP4";
+import video13 from "../assets/photos/interrail2023/IMG_9901.MP4";
 
 import portadaIslandia from "../assets/photos/islandia/portadaIslandia.jpg";
 import photo41 from "../assets/photos/islandia/IMG_3717.HEIC";
@@ -86,7 +97,8 @@ const travelData = {
     mapImage: portada2022,
     media: [photo1, photo2, photo3, photo4, photo5, photo7, photo8,
             photo9, photo10, photo11, photo12, photo13, photo14, photo15,
-            photo16, photo17, photo61, photo62
+            photo16, photo17, photo61, photo62, photo63, photo64, photo65,
+            photo66, photo67, photo68
     ].sort(() => Math.random() - 0.5),
   },
   "2": {
@@ -97,7 +109,7 @@ const travelData = {
     media: [photo18, photo19, photo20, photo21, photo22, photo23, photo24,
             photo25, photo26, photo27, photo28, photo29, photo30, photo31,
             photo32, photo33, photo34, photo35, photo36, photo37, photo38,
-            photo39, photo40
+            photo39, photo40, video10, video11, video12, video13, photo69
     ].sort(() => Math.random() - 0.5),
   },
   "3": {
