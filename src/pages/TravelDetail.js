@@ -68,6 +68,15 @@ import photo57 from "../assets/photos/islandia/IMG_7376.HEIC";
 import photo58 from "../assets/photos/islandia/IMG_3899.HEIC";
 import photo59 from "../assets/photos/islandia/IMG_7153.HEIC";
 import photo60 from "../assets/photos/islandia/IMG_7194.HEIC";
+import video1 from "../assets/photos/islandia/IMG_4182.MOV";
+import video2 from "../assets/photos/islandia/IMG_3820.MOV";
+import video3 from "../assets/photos/islandia/IMG_3834.MOV";
+import video4 from "../assets/photos/islandia/IMG_3847.MOV";
+import video5 from "../assets/photos/islandia/IMG_3993.MOV";
+import video6 from "../assets/photos/islandia/IMG_4003.MOV";
+import video7 from "../assets/photos/islandia/IMG_4056.MOV";
+import video8 from "../assets/photos/islandia/IMG_4135.MOV";
+import video9 from "../assets/photos/islandia/IMG_4177.MOV";
 
 const travelData = {
   "1": {
@@ -98,7 +107,8 @@ const travelData = {
     mapImage: portadaIslandia,
     media: [photo44, photo42, photo43, photo41, photo45, photo46, photo47,
             photo48, photo49, photo50, photo51, photo52, photo53, photo54,
-            photo55, photo56, photo57, photo58, photo59, photo60
+            photo55, photo56, photo57, photo58, photo59, photo60, video1,
+            video2, video3, video4, video5, video6, video7, video8, video9
     ].sort(() => Math.random() - 0.5),
   },
 };
@@ -118,6 +128,17 @@ const TravelPage = () => {
     );
   };
 
+  const renderMedia = (media) => {
+    const fileExtension = media.split('.').pop().toLowerCase();
+    if (['jpg', 'jpeg', 'png', 'heic'].includes(fileExtension)) {
+      return <img src={media} alt={`Slide ${currentIndex}`} className="slide-image" style={{ width: "900px", height: "650px", objectFit: "cover", borderRadius: "10px" }} />;
+    } else if (['mp4', 'webm', 'mov'].includes(fileExtension)) {
+      return <video src={media} controls autoPlay muted className="slide-video" style={{ width: "900px", height: "650px", objectFit: "cover", borderRadius: "10px" }} />;
+    } else {
+      return null;
+    }
+  };
+
   return (
     <div className="travel-page">
       <div
@@ -130,7 +151,7 @@ const TravelPage = () => {
           position: "relative",
         }}
       >
-        <div className="overlay"></div> {}
+        <div className="overlay"></div>
         <div className="info-text">
           <h1>{travel.title}</h1>
           <p>📅 {travel.startDate} - {travel.endDate}</p>
@@ -139,12 +160,7 @@ const TravelPage = () => {
       <div className="slideshow-container">
         <button className="prev" onClick={prevSlide}>❮</button>
         <div className="slide-wrapper">
-          <img
-            src={travel.media[currentIndex]}
-            alt={`Slide ${currentIndex}`}
-            className="slide-image"
-            style={{ width: "900px", height: "650px", objectFit: "cover", borderRadius: "10px" }}
-          />
+          {renderMedia(travel.media[currentIndex])}
         </div>
         <button className="next" onClick={nextSlide}>❯</button>
       </div>
