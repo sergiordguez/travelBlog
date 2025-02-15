@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSprings, animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
 
+import photo from "../assets/photos/interrail2022/IMG_3713.JPG";
 import photo2 from "../assets/photos/interrail2022/IMG_3593.JPG";
 import photo4 from "../assets/photos/interrail2022/IMG_3810.JPG";
 import photo5 from "../assets/photos/interrail2022/IMG_3957.JPG";
@@ -17,7 +18,7 @@ import photo44 from "../assets/photos/islandia/IMG_3780.HEIC";
 import photo56 from "../assets/photos/islandia/IMG_7338.HEIC";
 import photo50 from "../assets/photos/islandia/IMG_3923.HEIC";
 
-const images = [photo2, photo4, photo5, photo6, photo7, photo8,
+const images = [photo, photo2, photo4, photo5, photo6, photo7, photo8,
     photo9, photo59, photo54, photo48, photo52, photo44, photo56, photo50
 ].sort(() => Math.random() - 0.5);
 

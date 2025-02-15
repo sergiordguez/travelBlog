@@ -53,10 +53,11 @@ import photo38 from "../assets/photos/interrail2023/IMG_0653.JPG";
 import photo39 from "../assets/photos/interrail2023/IMG_9871.JPG";
 import photo40 from "../assets/photos/interrail2023/bd4cda06-44bd-4f01-af92-22d50f37b623.JPG";
 import photo69 from "../assets/photos/interrail2023/IMG_0137.JPG";
-import video10 from "../assets/photos/interrail2023/IMG_9880.MP4";
-import video11 from "../assets/photos/interrail2023/IMG_9896.MP4";
+import video10 from "../assets/photos/interrail2023/IMG_9886.MP4";
+import video11 from "../assets/photos/interrail2023/IMG_9895.MP4";
 import video12 from "../assets/photos/interrail2023/IMG_9897.MP4";
 import video13 from "../assets/photos/interrail2023/IMG_9901.MP4";
+import video14 from "../assets/photos/interrail2023/IMG_9919.MP4";
 
 import portadaIslandia from "../assets/photos/islandia/portadaIslandia.jpg";
 import photo41 from "../assets/photos/islandia/IMG_3717.HEIC";
@@ -83,7 +84,7 @@ import video1 from "../assets/photos/islandia/IMG_4182.MOV";
 import video2 from "../assets/photos/islandia/IMG_3820.MOV";
 import video3 from "../assets/photos/islandia/IMG_3834.MOV";
 import video4 from "../assets/photos/islandia/IMG_3847.MOV";
-import video5 from "../assets/photos/islandia/IMG_3993.MOV";
+import video5 from "../assets/photos/islandia/IMG_3998.MOV";
 import video6 from "../assets/photos/islandia/IMG_4003.MOV";
 import video7 from "../assets/photos/islandia/IMG_4056.MOV";
 import video8 from "../assets/photos/islandia/IMG_4135.MOV";
@@ -109,7 +110,8 @@ const travelData = {
     media: [photo18, photo19, photo20, photo21, photo22, photo23, photo24,
             photo25, photo26, photo27, photo28, photo29, photo30, photo31,
             photo32, photo33, photo34, photo35, photo36, photo37, photo38,
-            photo39, photo40, video10, video11, video12, video13, photo69
+            photo39, photo40, video10, video11, video12, video13, photo69,
+            video14
     ].sort(() => Math.random() - 0.5),
   },
   "3": {
@@ -145,7 +147,7 @@ const TravelPage = () => {
     if (['jpg', 'jpeg', 'png', 'heic'].includes(fileExtension)) {
       return <img src={media} alt={`Slide ${currentIndex}`} className="slide-image" style={{ width: "900px", height: "650px", objectFit: "cover", borderRadius: "10px" }} />;
     } else if (['mp4', 'webm', 'mov'].includes(fileExtension)) {
-      return <video src={media} controls autoPlay muted playsInline className="slide-video" style={{ width: "900px", height: "650px", objectFit: "cover", borderRadius: "10px" }} />;
+      return <video src={media} controls autoPlay muted playsInline loop className="slide-video" style={{ width: "900px", height: "650px", objectFit: "cover", borderRadius: "10px" }} />;
     } else {
       return null;
     }
