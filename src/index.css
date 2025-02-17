@@ -182,3 +182,26 @@ body {
 .footer .social-links a:hover {
   color: #e4c1ee;
 }
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .text-content {
+    font-size: 1.5rem;
+  }
+
+  .text-content a {
+    font-size: 1.2rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-content {
+    font-size: 1.2rem;
+  }
+
+  .text-content a {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+}
