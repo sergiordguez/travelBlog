@@ -80,7 +80,7 @@
 }
 
 .prev, .next {
-  background-color: transparent;
+  background-color: white;
   color: rgba(0, 0, 0, 0.5);
   border: none;
   padding: 10px 15px;

@@ -96,11 +96,11 @@ const travelData = {
     startDate: "4 de Julio, 2022",
     endDate: "16 de Julio, 2022",
     mapImage: portada2022,
-    media: [photo1, photo2, photo3, photo4, photo5, photo7, photo8,
-            photo9, photo10, photo11, photo12, photo13, photo14, photo15,
-            photo16, photo17, photo61, photo62, photo63, photo64, photo65,
-            photo66, photo67, photo68
-    ].sort(() => Math.random() - 0.5),
+    media: [photo9, photo12, photo61, photo13, photo10, photo11, photo14,
+            photo15, photo2, photo16, photo63, photo64, photo3, photo4,
+            photo5, photo62, photo65, photo66, photo67, photo17, photo7, 
+            photo68, photo68, photo1, photo8
+    ],
   },
   "2": {
     title: "Interrail 2023",
@@ -112,7 +112,7 @@ const travelData = {
             photo32, photo33, photo34, photo35, photo36, photo37, photo38,
             photo39, photo40, video10, video11, video12, video13, photo69,
             video14
-    ].sort(() => Math.random() - 0.5),
+    ],
   },
   "3": {
     title: "Islandia",
@@ -123,7 +123,7 @@ const travelData = {
             photo48, photo49, photo50, photo51, photo52, photo53, photo54,
             photo55, photo56, photo57, photo58, photo59, photo60, video1,
             video2, video3, video4, video5, video6, video7, video8, video9
-    ].sort(() => Math.random() - 0.5),
+    ],
   },
 };
 
