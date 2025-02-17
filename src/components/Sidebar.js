@@ -9,6 +9,7 @@ import {
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "../App";
+
 export function Sidebar({ sidebarOpen, setSidebarOpen }) {
   const ModSidebaropen = () => {
     setSidebarOpen(!sidebarOpen);
@@ -73,6 +74,7 @@ export function Sidebar({ sidebarOpen, setSidebarOpen }) {
     </Container>
   );
 }
+
 //#region Data links
 const linksArray = [
   {
@@ -82,24 +84,24 @@ const linksArray = [
   },
   {
     label: "Interrail 2022",
-    icon: <AiFillPicture  />,
+    icon: <AiFillPicture />,
     to: "/travel/1",
   },
   {
     label: "Interrail 2023",
-    icon: <AiFillPicture  />,
+    icon: <AiFillPicture />,
     to: "/travel/2",
   },
   {
     label: "Islandia",
-    icon: <AiFillPicture  />,
+    icon: <AiFillPicture />,
     to: "/travel/3",
   },
 ];
 const secondarylinksArray = [
   {
     label: "Sobre Nosotros",
-    icon: <AiFillInfoCircle  />,
+    icon: <AiFillInfoCircle />,
     to: "/about",
   },
 ];
@@ -142,7 +144,6 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding-bottom: ${v.lgSpacing};
     .imgcontent {
       display: flex;
@@ -160,7 +161,6 @@ const Container = styled.div`
   }
   .LinkContainer {
     margin: 8px 0;
-   
     padding: 0 15%;
     :hover {
       background: ${(props) => props.theme.bg3};
@@ -169,13 +169,12 @@ const Container = styled.div`
       display: flex;
       align-items: center;
       text-decoration: none;
-      padding: calc(${v.smSpacing}-2px) 0;
+      padding: calc(${v.smSpacing} - 2px) 0;
       color: ${(props) => props.theme.text};
-      height:50px;
+      height: 50px;
       .Linkicon {
         padding: ${v.smSpacing} ${v.mdSpacing};
         display: flex;
-
         svg {
           font-size: 25px;
         }
@@ -246,7 +245,6 @@ const Container = styled.div`
               bottom: 0;
               background: ${({ themeUse }) =>
                 themeUse === "light" ? v.lightcheckbox : v.checkbox};
-
               transition: 0.4s;
               &::before {
                 position: absolute;
@@ -260,12 +258,33 @@ const Container = styled.div`
               }
               &.round {
                 border-radius: 34px;
-
                 &::before {
                   border-radius: 50%;
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .Sidebarbutton {
+      top: 10px;
+      right: 10px;
+    }
+    .Logocontent {
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+    .LinkContainer {
+      padding: 0 10%;
+      .Links {
+        .Linkicon {
+          padding: ${v.smSpacing} ${v.smSpacing};
+          svg {
+            font-size: 20px;
           }
         }
       }

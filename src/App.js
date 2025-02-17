@@ -11,7 +11,7 @@ function App() {
   const [theme, setTheme] = useState("light");
   const themeStyle = theme === "light" ? Light : Dark;
 
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false); // Iniciar la barra lateral cerrada
   return (
     <>
       <ThemeContext.Provider value={{ setTheme, theme }}>
@@ -34,10 +34,16 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: 90px auto;
   background: ${({ theme }) => theme.bgtotal};
-  transition:all 0.3s ;
+  transition: all 0.3s;
   &.active {
     grid-template-columns: 300px auto;
   }
-  color:${({theme})=>theme.text};
+  color: ${({ theme }) => theme.text};
+  @media (max-width: 768px) {
+    grid-template-columns: 60px auto;
+    &.active {
+      grid-template-columns: 200px auto;
+    }
+  }
 `;
 export default App;
