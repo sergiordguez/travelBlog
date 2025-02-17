@@ -43,13 +43,9 @@ const Content = styled.div`
   flex-grow: 1;
   padding: 20px;
   transition: all 0.3s;
-  &.sidebarState.active {
-    margin-left: 300px;
-  }
+  margin-left: ${({ sidebarOpen }) => (sidebarOpen ? "300px" : "60px")};
   @media (max-width: 768px) {
-    &.sidebarState.active {
-      margin-left: 200px;
-    }
+    margin-left: ${({ sidebarOpen }) => (sidebarOpen ? "300px" : "60px")};
   }
 `;
 
