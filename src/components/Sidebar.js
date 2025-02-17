@@ -289,6 +289,11 @@ const Container = styled.div`
         }
       }
     }
+    .Logocontent,
+    .LinkContainer,
+    .Themecontent {
+      display: ${({ isOpen }) => (isOpen ? `block` : `none`)};
+    }
   }
 `;
 const Divider = styled.div`

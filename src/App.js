@@ -22,7 +22,9 @@ function App() {
                 sidebarOpen={sidebarOpen}
                 setSidebarOpen={setSidebarOpen}
               />
-              <MyRoutes />
+              <Content>
+                <MyRoutes />
+              </Content>
             </Container>
           </BrowserRouter>
         </ThemeProvider>
@@ -44,6 +46,12 @@ const Container = styled.div`
     &.active {
       grid-template-columns: 200px auto;
     }
+  }
+`;
+const Content = styled.div`
+  padding: 20px;
+  @media (max-width: 768px) {
+    padding: 10px;
   }
 `;
 export default App;
