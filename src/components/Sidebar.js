@@ -3,7 +3,7 @@ import { v } from "../styles/Variables";
 import {
   AiOutlineLeft,
   AiOutlineHome,
-  AiFillPicture,
+  AiFillPushpin,
   AiFillInfoCircle 
 } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
@@ -84,17 +84,17 @@ const linksArray = [
   },
   {
     label: "Interrail 2022",
-    icon: <AiFillPicture  />,
+    icon: <AiFillPushpin  />,
     to: "/travel/1",
   },
   {
     label: "Interrail 2023",
-    icon: <AiFillPicture  />,
+    icon: <AiFillPushpin  />,
     to: "/travel/2",
   },
   {
     label: "Islandia",
-    icon: <AiFillPicture  />,
+    icon: <AiFillPushpin  />,
     to: "/travel/3",
   },
 ];
