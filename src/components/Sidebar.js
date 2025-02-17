@@ -78,30 +78,30 @@ export function Sidebar({ sidebarOpen, setSidebarOpen }) {
 //#region Data links
 const linksArray = [
   {
-    label: "Inicio",
+    label: "Home",
     icon: <AiOutlineHome />,
     to: "/",
   },
   {
     label: "Interrail 2022",
-    icon: <AiFillPicture />,
+    icon: <AiFillPicture  />,
     to: "/travel/1",
   },
   {
     label: "Interrail 2023",
-    icon: <AiFillPicture />,
+    icon: <AiFillPicture  />,
     to: "/travel/2",
   },
   {
     label: "Islandia",
-    icon: <AiFillPicture />,
+    icon: <AiFillPicture  />,
     to: "/travel/3",
   },
 ];
 const secondarylinksArray = [
   {
     label: "Sobre Nosotros",
-    icon: <AiFillInfoCircle />,
+    icon: <AiFillInfoCircle  />,
     to: "/about",
   },
 ];
@@ -109,11 +109,16 @@ const secondarylinksArray = [
 
 //#region STYLED COMPONENTS
 const Container = styled.div`
+  width: ${({ isOpen }) => (isOpen ? "300px" : "90px")};
+  height: 100vh;
   color: ${(props) => props.theme.text};
   background: ${(props) => props.theme.bg};
-  position: sticky;
+  position: fixed;
+  top: 0;
+  left: 0;
   padding-top: 20px;
-  z-index: 999; /* Asegura que el contenedor esté por encima de otros elementos */
+  transition: width 0.3s;
+  z-index: 1000;
   .Sidebarbutton {
     position: absolute;
     top: ${v.xxlSpacing};
@@ -138,7 +143,6 @@ const Container = styled.div`
     padding: 0;
     font-family: inherit;
     outline: none;
-    z-index: 10000; /* Asegura que el botón esté por encima de otros elementos */
   }
   .Logocontent {
     display: flex;
@@ -169,7 +173,7 @@ const Container = styled.div`
       display: flex;
       align-items: center;
       text-decoration: none;
-      padding: calc(${v.smSpacing} - 2px) 0;
+      padding: calc(${v.smSpacing}-2px) 0;
       color: ${(props) => props.theme.text};
       height: 50px;
       .Linkicon {
@@ -266,33 +270,6 @@ const Container = styled.div`
           }
         }
       }
-    }
-  }
-  @media (max-width: 768px) {
-    .Sidebarbutton {
-      top: 10px;
-      right: 10px;
-    }
-    .Logocontent {
-      h2 {
-        font-size: 1.2rem;
-      }
-    }
-    .LinkContainer {
-      padding: 0 10%;
-      .Links {
-        .Linkicon {
-          padding: ${v.smSpacing} ${v.smSpacing};
-          svg {
-            font-size: 20px;
-          }
-        }
-      }
-    }
-    .Logocontent,
-    .LinkContainer,
-    .Themecontent {
-      display: ${({ isOpen }) => (isOpen ? `block` : `none`)};
     }
   }
 `;

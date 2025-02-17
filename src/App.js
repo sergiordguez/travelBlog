@@ -17,12 +17,12 @@ function App() {
       <ThemeContext.Provider value={{ setTheme, theme }}>
         <ThemeProvider theme={themeStyle}>
           <BrowserRouter>
-            <Container className={sidebarOpen ? "sidebarState active" : ""}>
+            <Container>
               <Sidebar
                 sidebarOpen={sidebarOpen}
                 setSidebarOpen={setSidebarOpen}
               />
-              <Content>
+              <Content className={sidebarOpen ? "sidebarState active" : ""}>
                 <MyRoutes />
               </Content>
             </Container>
@@ -33,25 +33,24 @@ function App() {
   );
 }
 const Container = styled.div`
-  display: grid;
-  grid-template-columns: 90px auto;
+  display: flex;
   background: ${({ theme }) => theme.bgtotal};
   transition: all 0.3s;
-  &.active {
-    grid-template-columns: 300px auto;
-  }
   color: ${({ theme }) => theme.text};
+`;
+
+const Content = styled.div`
+  flex-grow: 1;
+  padding: 20px;
+  transition: all 0.3s;
+  &.sidebarState.active {
+    margin-left: 300px;
+  }
   @media (max-width: 768px) {
-    grid-template-columns: 60px auto;
-    &.active {
-      grid-template-columns: 200px auto;
+    &.sidebarState.active {
+      margin-left: 200px;
     }
   }
 `;
-const Content = styled.div`
-  padding: 20px;
-  @media (max-width: 768px) {
-    padding: 10px;
-  }
-`;
+
 export default App;

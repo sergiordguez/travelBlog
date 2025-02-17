@@ -1,10 +1,17 @@
-body {
+body, html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  min-height: 100vh; /* Ensure full height coverage */
 }
 
 code {
@@ -19,15 +26,6 @@ html, body {
   padding: 0;
 }
 
-/* index.css */
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
 .home {
   text-align: center;
   position: relative;
@@ -35,7 +33,9 @@ body {
 }
 
 .photo-slider {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -51,9 +51,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.2; 
+  opacity: 1; 
   transition: opacity 1s ease-in-out;
-  transform: scale(1.2); 
+  transform: scale(1); 
 }
 
 .text-content {
@@ -63,6 +63,8 @@ body {
   font-size: 2rem;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+  padding: 0 20px; /* Añadir padding para evitar que el texto se corte */
+  box-sizing: border-box; /* Asegurar que el padding se incluya en el tamaño total */
 }
 
 .text-content h1, .text-content p {
@@ -187,6 +189,7 @@ body {
 @media (max-width: 768px) {
   .text-content {
     font-size: 1.5rem;
+    padding: 0 15px; /* Ajustar padding para pantallas medianas */
   }
 
   .text-content a {
@@ -198,6 +201,7 @@ body {
 @media (max-width: 480px) {
   .text-content {
     font-size: 1.2rem;
+    padding: 0 10px; /* Ajustar padding para pantallas pequeñas */
   }
 
   .text-content a {

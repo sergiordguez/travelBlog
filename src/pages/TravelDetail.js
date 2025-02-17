@@ -145,9 +145,9 @@ const TravelPage = () => {
   const renderMedia = (media) => {
     const fileExtension = media.split('.').pop().toLowerCase();
     if (['jpg', 'jpeg', 'png', 'heic'].includes(fileExtension)) {
-      return <img src={media} alt={`Slide ${currentIndex}`} className="slide-image" />;
+      return <img src={media} alt={`Slide ${currentIndex}`} className="slide-image media-item" />;
     } else if (['mp4', 'webm', 'mov'].includes(fileExtension)) {
-      return <video src={media} controls autoPlay muted playsInline loop className="slide-video" />;
+      return <video src={media} controls autoPlay muted playsInline loop className="slide-video media-item" />;
     } else {
       return null;
     }

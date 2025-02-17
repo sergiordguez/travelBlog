@@ -1,8 +1,17 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 .travel-page {
   max-width: 1200px;
   margin: auto;
   padding: 20px;
   text-align: center;
+  min-height: 100vh; /* Ensure full height coverage */
 }
 
 .travel-info {
@@ -62,14 +71,10 @@
 }
 
 .media-item {
-  width: 600px;
-  height: 400px;
+  width: 900px;
+  height: 650px;
+  object-fit: cover;
   border-radius: 10px;
-  border: 5px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  object-fit: contain;
-  background-color: #f8f8f8;
-  padding: 10px;
 }
 
 .slideshow-container {
