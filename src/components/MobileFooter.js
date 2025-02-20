@@ -13,6 +13,9 @@ const MobileFooter = () => {
 
   return (
     <FooterContainer>
+      <ThemeToggle onClick={toggleTheme}>
+        {theme === "light" ? "🌑" : "☀️"}
+      </ThemeToggle>
       <NavLink to="/" className="footer-link">
         <AiOutlineHome />
         <span>Inicio</span>
@@ -21,9 +24,6 @@ const MobileFooter = () => {
         <AiFillInfoCircle />
         <span>Sobre Nosotros</span>
       </NavLink>
-      <ThemeToggle onClick={toggleTheme}>
-        {theme === "light" ? "🌑" : "☀️"}
-      </ThemeToggle>
     </FooterContainer>
   );
 };
