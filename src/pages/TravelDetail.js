@@ -107,11 +107,11 @@ const travelData = {
     startDate: "6 de Julio, 2023",
     endDate: "19 de Julio, 2023",
     mapImage: portada2023,
-    media: [photo18, photo19, photo20, photo21, photo22, photo23, photo24,
-            photo25, photo26, photo27, photo28, photo29, photo30, photo31,
-            photo32, photo33, photo34, photo35, photo36, photo37, photo38,
-            photo39, photo40, video10, video11, video12, video13, photo69,
-            video14
+    media: [photo18, photo24, photo25, photo23, photo26, photo27,
+            photo28, photo29, photo30, photo69, photo19, photo20,
+            photo21, photo31, photo32, photo33, photo34, photo35,
+            video10, photo22, photo36, video11, video12, photo37, 
+            video13, video14, photo38, photo39, photo40
     ],
   },
   "3": {
