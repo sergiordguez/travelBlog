@@ -119,10 +119,10 @@ const travelData = {
     startDate: "10 de Julio, 2024",
     endDate: "18 de Julio, 2024",
     mapImage: portadaIslandia,
-    media: [photo44, photo42, photo43, photo41, photo45, photo46, photo47,
-            photo48, photo49, photo50, photo51, photo52, photo53, photo54,
-            photo55, photo56, photo57, photo58, photo59, photo60, video1,
-            video2, video3, video4, video5, video6, video7, video8, video9
+    media: [photo41, photo42, photo43, photo44, photo45, photo46, photo47,
+            video2, photo48, video3, photo49, video4, photo50, photo59,
+            photo51, video6, photo52, video5, photo58, photo60, photo54, 
+            photo53, video7, photo56, video8, photo55, photo57, video9, video1
     ],
   },
 };
