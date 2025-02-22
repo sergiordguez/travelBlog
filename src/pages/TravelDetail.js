@@ -101,6 +101,7 @@ const travelData = {
             photo5, photo62, photo65, photo66, photo67, photo17, photo7, 
             photo68, photo68, photo1, photo8
     ],
+    location: "Bruselas, Amsterdam, Paris y Milan",
   },
   "2": {
     title: "Interrail 2023",
@@ -113,6 +114,7 @@ const travelData = {
             video10, photo22, photo36, video11, video12, photo37, 
             video13, video14, photo38, photo39, photo40
     ],
+    location: "Hamburgo, Copenhague, Estocolmo, Oslo y Bergen",
   },
   "3": {
     title: "Islandia",
@@ -124,6 +126,7 @@ const travelData = {
             photo51, video6, photo52, video5, photo58, photo60, photo54, 
             photo53, video7, photo56, video8, photo55, photo57, video9, video1
     ],
+    location: "Reikiavik, Selfoss, Vik, Jökulsárlón, Höfn y Snæfellsnes",
   },
 };
 
@@ -168,6 +171,7 @@ const TravelPage = () => {
         <div className="overlay"></div>
         <div className="info-text">
           <h1>{travel.title}</h1>
+          <p>📍 {travel.location}</p>
           <p>📅 {travel.startDate} - {travel.endDate}</p>
         </div>
       </div>
