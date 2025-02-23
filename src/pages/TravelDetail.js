@@ -171,7 +171,6 @@ const TravelPage = () => {
         <div className="overlay"></div>
         <div className="info-text">
           <h1>{travel.title}</h1>
-          <p>📍 {travel.location}</p>
           <p>📅 {travel.startDate} - {travel.endDate}</p>
         </div>
       </div>
@@ -181,6 +180,9 @@ const TravelPage = () => {
           {renderMedia(travel.media[currentIndex])}
         </div>
         <button className="next" onClick={nextSlide}>❯</button>
+      </div>
+      <div style={{margin-bottom: 20px}}> 
+         <p>📍 <em>{travel.location}</em></p>
       </div>
     </div>
   );
