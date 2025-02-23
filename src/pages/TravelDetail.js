@@ -181,9 +181,7 @@ const TravelPage = () => {
         </div>
         <button className="next" onClick={nextSlide}>❯</button>
       </div>
-      <div style={{margin-bottom: 20px}}> 
-         <p>📍 <em>{travel.location}</em></p>
-      </div>
+     <p>📍 <em>{travel.location}</em></p>
     </div>
   );
 };
