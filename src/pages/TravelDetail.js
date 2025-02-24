@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/TravelPage.css";
+import "../styles/HotelCard.css"; // Import the new CSS file for HotelCard
 
 import portada2022 from "../assets/photos/interrail2022/portada2022.jpg";
 import photo1 from "../assets/photos/interrail2022/03e394b7-6801-49ab-94e2-fd62fe58dd5b.JPG";
@@ -102,8 +103,12 @@ const travelData = {
             photo68, photo68, photo1, photo8
     ],
     location: "Bruselas, Amsterdam, Paris y Milan",
-    hoteles: ["https://www.booking.com/Share-AcHcA1", "https://www.booking.com/Share-is1UCa", "https://www.booking.com/Share-SYdAxh"
-            , "https://www.booking.com/Share-uFBWOh"],
+    hoteles: [
+      { url: "https://www.booking.com/Share-AcHcA1", name: "Bruselas" },
+      { url: "https://www.booking.com/Share-is1UCa", name: "Amsterdam" },
+      { url: "https://www.booking.com/Share-SYdAxh", name: "Paris" },
+      { url: "https://www.booking.com/Share-uFBWOh", name: "Milan" }
+    ],
   },
   "2": {
     title: "Interrail 2023",
@@ -117,8 +122,13 @@ const travelData = {
             video13, video14, photo38, photo39, photo40
     ],
     location: "Hamburgo, Copenhague, Estocolmo, Oslo y Bergen",
-    hoteles: ["https://www.booking.com/Share-eNs2xo", "https://www.booking.com/Share-Zj2Lx1", "https://www.booking.com/Share-U3GIf9"
-            , "https://www.booking.com/Share-sPxDbO", "https://www.booking.com/Share-N5kwn9q"],
+    hoteles: [
+      { url: "https://www.booking.com/Share-eNs2xo", name: "Hamburgo" },
+      { url: "https://www.booking.com/Share-Zj2Lx1", name: "Copenhague" },
+      { url: "https://www.booking.com/Share-U3GIf9", name: "Estocolmo" },
+      { url: "https://www.booking.com/Share-sPxDbO", name: "Oslo" },
+      { url: "https://www.booking.com/Share-N5kwn9q", name: "Bergen" }
+    ],
   },
   "3": {
     title: "Islandia",
@@ -131,10 +141,23 @@ const travelData = {
             photo53, video7, photo56, video8, photo55, photo57, video9, video1
     ],
     location: "Reikiavik, Selfoss, Vik, Jökulsárlón, Höfn y Snæfellsnes",
-    hoteles: ["https://www.airbnb.com/l/jt5AydKl", "https://www.booking.com/Share-pwXyekH"],
+    hoteles: [
+      { url: "https://www.airbnb.com/l/jt5AydKl", name: "Reikiavik" },
+      { url: "https://www.booking.com/Share-pwXyekH", name: "Selfoss" }
+    ],
     coche: "https://www.bluecarrental.is/",
   },
 };
+
+const HotelCard = ({ hotel, index }) => (
+  <div className="hotel-card">
+    <a href={hotel.url} target="_blank" rel="noreferrer">
+      <div className="hotel-card-content">
+        <h2>{hotel.name}</h2>
+      </div>
+    </a>
+  </div>
+);
 
 const TravelPage = () => {
   const { id } = useParams();
@@ -189,6 +212,13 @@ const TravelPage = () => {
       </div>
       <div style={{ marginBottom: "30px" }}>
         <p>📍 <em>{travel.location}</em></p>
+        <h1>🏨 Hoteles</h1>
+        <p>Estos son los hoteles o apartamentos donde nos alojamos en cada sitio de este viaje</p>
+        <div className="hotel-cards-container">
+          {travel.hoteles.map((hotel, index) => (
+            <HotelCard key={index} hotel={hotel} index={index} />
+          ))}
+        </div>
       </div>
     </div>
   );
