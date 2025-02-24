@@ -1,4 +1,4 @@
-# travelBlog 2.0.0
+# travelBlog 
 
 Web application for a blog of all the trips we have done.
 You can access to it by: https://sptripbook.vercel.app/
