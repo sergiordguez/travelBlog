@@ -102,6 +102,8 @@ const travelData = {
             photo68, photo68, photo1, photo8
     ],
     location: "Bruselas, Amsterdam, Paris y Milan",
+    hoteles: ["https://www.booking.com/Share-AcHcA1", "https://www.booking.com/Share-is1UCa", "https://www.booking.com/Share-SYdAxh"
+            , "https://www.booking.com/Share-uFBWOh"],
   },
   "2": {
     title: "Interrail 2023",
@@ -115,6 +117,8 @@ const travelData = {
             video13, video14, photo38, photo39, photo40
     ],
     location: "Hamburgo, Copenhague, Estocolmo, Oslo y Bergen",
+    hoteles: ["https://www.booking.com/Share-eNs2xo", "https://www.booking.com/Share-Zj2Lx1", "https://www.booking.com/Share-U3GIf9"
+            , "https://www.booking.com/Share-sPxDbO", "https://www.booking.com/Share-N5kwn9q"],
   },
   "3": {
     title: "Islandia",
@@ -127,6 +131,8 @@ const travelData = {
             photo53, video7, photo56, video8, photo55, photo57, video9, video1
     ],
     location: "Reikiavik, Selfoss, Vik, Jökulsárlón, Höfn y Snæfellsnes",
+    hoteles: ["https://www.airbnb.com/l/jt5AydKl", "https://www.booking.com/Share-pwXyekH"],
+    coche: "https://www.bluecarrental.is/",
   },
 };
 
@@ -181,7 +187,7 @@ const TravelPage = () => {
         </div>
         <button className="next" onClick={nextSlide}>❯</button>
       </div>
-      <div style={{ marginBottom: "20px" }}>
+      <div style={{ marginBottom: "30px" }}>
         <p>📍 <em>{travel.location}</em></p>
       </div>
     </div>
