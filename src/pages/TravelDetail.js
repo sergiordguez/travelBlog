@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/TravelPage.css";
-import "../styles/HotelCard.css"; // Import the new CSS file for HotelCard
+import "../styles/HotelCard.css"; 
 
 import portada2022 from "../assets/photos/interrail2022/portada2022.jpg";
 import photo1 from "../assets/photos/interrail2022/03e394b7-6801-49ab-94e2-fd62fe58dd5b.JPG";
@@ -109,6 +109,21 @@ const travelData = {
       { url: "https://www.booking.com/Share-SYdAxh", name: "Paris" },
       { url: "https://www.booking.com/Share-uFBWOh", name: "Milan" }
     ],
+    itinerario: [
+      { dia: "Día 1", ciudad: "Nuestro primer día fue un poco loco, salimos de madrugada desde Asturias hasta Madrid, donde hicimos trasbordo hasta nuestro primer destino, Bruselas. Ese mismo día decidimos dar nuestra primera visita a esta ciudad, visitando la mítica plaza del Grand Place aunque tampoco nos aventuramos demasiado ya que estabamos cansados y queriamos hacer compras básicas para empezar nuestro viaje." },
+      { dia: "Día 2", ciudad: "Después de descansar de los horarios de viaje del dia anterior, empezamos a curiosear por la capital belga. Los dos somos grandes fans de las patatas fritas, y veniamos con los deberes hechos y sabiamos que las patatas de 'La Friterie' eran dignas de probar, y lo confirmamos, te dejan escoger entre varias salsas aunque nosotros decidimos ir por lo clásico y escogimos el ketchup. Bruselas es una ciudad simple, en la que a lo mejor no te encuentras muchos sitios turisticos o cosas llamativas, pero te puedes perder por sus calles y parques e inundarte en la diversidad social que presenta esta ciudad." },
+      { dia: "Día 3", ciudad: "bla bla bla bla" },
+      { dia: "Día 4", ciudad: "bla bla bla bla" },
+      { dia: "Día 5", ciudad: "bla bla bla bla" },
+      { dia: "Día 6", ciudad: "bla bla bla bla" },
+      { dia: "Día 7", ciudad: "bla bla bla bla" },
+      { dia: "Día 8", ciudad: "bla bla bla bla" },
+      { dia: "Día 9", ciudad: "bla bla bla bla" },
+      { dia: "Día 10", ciudad: "bla bla bla bla" },
+      { dia: "Día 11", ciudad: "bla bla bla bla" },
+      { dia: "Día 12", ciudad: "bla bla bla bla" },
+      { dia: "Día 13", ciudad: "bla bla bla bla" },
+    ],
   },
   "2": {
     title: "Interrail 2023",
@@ -129,6 +144,22 @@ const travelData = {
       { url: "https://www.booking.com/Share-sPxDbO", name: "Oslo" },
       { url: "https://www.booking.com/Share-N5kwn9q", name: "Bergen" }
     ],
+    itinerario: [
+      { dia: "Día 1", ciudad: "bla bla bla bla" },
+      { dia: "Día 2", ciudad: "bla bla bla bla" },
+      { dia: "Día 3", ciudad: "bla bla bla bla" },
+      { dia: "Día 4", ciudad: "bla bla bla bla" },
+      { dia: "Día 5", ciudad: "bla bla bla bla" },
+      { dia: "Día 6", ciudad: "bla bla bla bla" },
+      { dia: "Día 7", ciudad: "bla bla bla bla" },
+      { dia: "Día 8", ciudad: "bla bla bla bla" },
+      { dia: "Día 9", ciudad: "bla bla bla bla" },
+      { dia: "Día 10", ciudad: "bla bla bla bla" },
+      { dia: "Día 11", ciudad: "bla bla bla bla" },
+      { dia: "Día 12", ciudad: "bla bla bla bla" },
+      { dia: "Día 13", ciudad: "bla bla bla bla" },
+      { dia: "Día 14", ciudad: "bla bla bla bla" },
+    ],
   },
   "3": {
     title: "Islandia",
@@ -143,9 +174,20 @@ const travelData = {
     location: "Reikiavik, Selfoss, Vik, Jökulsárlón, Höfn y Snæfellsnes",
     hoteles: [
       { url: "https://www.airbnb.com/l/jt5AydKl", name: "Reikiavik" },
-      { url: "https://www.booking.com/Share-pwXyekH", name: "Selfoss" }
+      { url: "https://www.booking.com/Share-pwXyekH", name: "Selfoss" },
+      { url: "https://www.bluecarrental.is/", name: "Alquiler coche" }
     ],
-    coche: "https://www.bluecarrental.is/",
+    itinerario: [
+      { dia: "Día 1", ciudad: "bla bla bla bla" },
+      { dia: "Día 2", ciudad: "bla bla bla bla" },
+      { dia: "Día 3", ciudad: "bla bla bla bla" },
+      { dia: "Día 4", ciudad: "bla bla bla bla" },
+      { dia: "Día 5", ciudad: "bla bla bla bla" },
+      { dia: "Día 6", ciudad: "bla bla bla bla" },
+      { dia: "Día 7", ciudad: "bla bla bla bla" },
+      { dia: "Día 8", ciudad: "bla bla bla bla" },
+      { dia: "Día 9", ciudad: "bla bla bla bla" },
+    ],
   },
 };
 
@@ -212,6 +254,15 @@ const TravelPage = () => {
       </div>
       <div style={{ marginBottom: "30px" }}>
         <p>📍 <em>{travel.location}</em></p>
+        <h1> 🚗 Itinerario</h1>
+        <div className="itinerario-container">
+          {travel.itinerario.map((item, index) => (
+            <div key={index} className="itinerario-item">
+              <h2>{item.dia}</h2>
+              <p>{item.ciudad}</p>
+            </div>
+          ))}
+        </div>
         <h1>🏨 Hoteles</h1>
         <p>Estos son los hoteles o apartamentos donde nos alojamos en cada sitio de este viaje</p>
         <div className="hotel-cards-container">
